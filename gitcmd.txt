@@ -1,0 +1,50 @@
+# Initialize git repository
+git init
+# Add files to staging area
+git add .
+# Commit files
+git commit -m "Initial commit"
+# Rename branch to main
+git branch -M main
+# Connect local repo to GitHub repo (replace username if needed)
+git remote add origin https://github.com/zishaandude/terraproject1.git
+# Pull from GitHub first (important to avoid errors like "fetch first")
+git pull origin main --rebase
+# Push code to GitHub
+git push -u origin main
+# If you face conflicts or want to overwrite GitHub (use carefully)
+# git push -u origin main --force
+----------------------------------------------------
+git mv vpc.tf.txt vpc.tf
+git commit -m "rename to terraform file"
+git push
+----------------------------------------------------
+# FIRST TIME ON NEW LAPTOP
+
+# 1. Clone repository from GitHub
+git clone https://github.com/zishaandude/terraproject1.git
+# 2. Go inside project folder
+cd terraproject1
+# (NO NEED to run git pull right after clone)
+# 1. Always pull latest code before starting work
+git pull
+# 2. Edit your files (example: vpc.tf)
+# 3. Add changes to staging
+git add .
+# 4. Commit changes
+git commit -m "your update message"
+# 5. Push to GitHub
+git push
+---------------------------------------------------------------
+#OLD LAPTOP - CONTINUE WORK
+# 1. Go to your project folder
+cd ~/Desktop/ravi-teja/terraform-project1
+# 2. Pull latest changes from GitHub (IMPORTANT)
+git pull
+# AFTER EDITING
+# 4. Add changes
+git add .
+# 5. Commit changes
+git commit -m "continue work from old laptop"
+# 6. Push changes to GitHub
+git push
